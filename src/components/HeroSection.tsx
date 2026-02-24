@@ -39,14 +39,22 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold leading-[1.1] tracking-tight text-foreground mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold leading-[1.1] tracking-tight text-foreground mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            Find Real Pickup Basketball Games{" "}
-            <span className="text-primary">Anywhere</span>
+            Meet <span className="text-primary">Courtava</span>
           </motion.h1>
+
+          <motion.p
+            className="text-xl sm:text-2xl lg:text-3xl font-display font-semibold text-muted-foreground mb-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+          >
+            Find Real Pickup Basketball Games Anywhere
+          </motion.p>
 
           <motion.p
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
