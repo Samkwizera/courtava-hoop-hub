@@ -1,11 +1,12 @@
 import { Instagram, Twitter, Youtube } from "lucide-react";
+import logo from "@/assets/courtava-logo.png";
 
 const Footer = () => (
   <footer className="py-12 border-t border-border">
     <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
-          <span className="text-xl">🏀</span>
+          <img src={logo} alt="Courtava" className="h-7 w-7" />
           <span className="font-display font-bold text-foreground">Courtava</span>
         </div>
 
