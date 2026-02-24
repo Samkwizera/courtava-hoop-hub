@@ -12,7 +12,7 @@ const Footer = () => (
 
         <div className="flex flex-col items-center gap-2">
           <p className="text-sm text-muted-foreground">Follow us on social media</p>
-          <a href="https://www.instagram.com/trycourtava" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+          <a href="https://www.instagram.com/trycourtava/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <Instagram className="w-5 h-5" />
             <span className="text-sm font-medium">@trycourtava</span>
           </a>
