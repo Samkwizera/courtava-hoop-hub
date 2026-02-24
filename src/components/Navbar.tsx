@@ -46,7 +46,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="#early-access">
+          <a href="https://form.typeform.com/to/jXf0uH8t" target="_blank" rel="noopener noreferrer">
             <Button size="sm">Join Early Access</Button>
           </a>
         </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="#early-access" onClick={() => setMobileOpen(false)}>
+          <a href="https://form.typeform.com/to/jXf0uH8t" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
             <Button size="sm" className="w-full">
               Join Early Access
             </Button>
