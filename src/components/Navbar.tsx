@@ -20,14 +20,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
+      <div
+        className={`container mx-auto flex items-center justify-between py-3 px-6 rounded-2xl transition-all duration-300 ${
+          scrolled
+            ? "bg-background/80 backdrop-blur-xl shadow-lg border border-border"
+            : "bg-background/50 backdrop-blur-md border border-border/50"
+        }`}
+      >
         <a href="#" className="flex items-center gap-2">
           <img src={logo} alt="Courtava" className="h-8 w-8" />
           <span className="font-display text-xl font-bold text-foreground">
