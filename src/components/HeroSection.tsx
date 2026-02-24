@@ -4,9 +4,9 @@ import { ArrowRight, MapPin, Users, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-basketball.png";
 
 const stats = [
-  { icon: MapPin, label: "Courts mapped", value: "200+" },
-  { icon: Users, label: "Players waiting", value: "1,500+" },
-  { icon: Zap, label: "Cities launching", value: "3" },
+  { icon: MapPin, label: "Courts mapped", value: "10+" },
+  { icon: Users, label: "Players waiting", value: "420+" },
+  { icon: Zap, label: "Cities launching", value: "2" },
 ];
 
 const HeroSection = () => {
