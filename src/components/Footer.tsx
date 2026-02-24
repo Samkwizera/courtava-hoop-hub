@@ -14,7 +14,7 @@ const Footer = () => (
           <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
             <Twitter className="w-5 h-5" />
           </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="https://instagram.com/trycourtava" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
             <Instagram className="w-5 h-5" />
           </a>
           <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -24,7 +24,7 @@ const Footer = () => (
 
         <div className="text-center md:text-right">
           <p className="text-sm text-muted-foreground">
-            hello@courtava.com
+            courtavaai@gmail.com
           </p>
           <p className="text-xs text-muted-foreground mt-1">
             © {new Date().getFullYear()} Courtava. All rights reserved.
