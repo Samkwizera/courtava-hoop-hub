@@ -3,18 +3,18 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Marcus J.",
-    city: "Chicago, IL",
+    name: "Ngamije Dav",
+    city: "Kigali, Rwanda",
     text: "I've been waiting for something like this. No more random group chat invites — just show up and play.",
   },
   {
-    name: "Priya S.",
-    city: "Austin, TX",
+    name: "Toussaint Nkundwa",
+    city: "Kigali, Rwanda",
     text: "As a new player in town, finding pickup games was impossible. Courtava is a game changer.",
   },
   {
-    name: "DeShawn W.",
-    city: "Atlanta, GA",
+    name: "Mutabazi Bruno",
+    city: "Kigali, Rwanda",
     text: "Hosting games with Courtava makes it so easy to get my regular crew together.",
   },
 ];
