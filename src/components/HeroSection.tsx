@@ -44,7 +44,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            Find Real Pickup Games{" "}
+            Find Real Pickup Basketball Games{" "}
             <span className="text-primary">Anywhere</span>
           </motion.h1>
 
