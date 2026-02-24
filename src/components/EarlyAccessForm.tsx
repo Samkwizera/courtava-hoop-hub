@@ -38,7 +38,7 @@ const EarlyAccessForm = () => {
         >
           {submitted ? (
             <div className="text-center bg-secondary rounded-2xl p-12 border border-border">
-              <span className="text-5xl mb-4 block">🏀</span>
+              <span className="text-5xl mb-4 block">✓</span>
               <h3 className="font-display font-bold text-2xl text-foreground mb-2">
                 You're on the Courtava roster!
               </h3>

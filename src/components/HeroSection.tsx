@@ -23,7 +23,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-6">
-              🏀 Early Access — Join the Waitlist
+              Early Access — Join the Waitlist
             </span>
           </motion.div>
 

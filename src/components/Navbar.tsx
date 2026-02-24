@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/courtava-logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +29,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <a href="#" className="flex items-center gap-2">
-          <span className="text-2xl">🏀</span>
+          <img src={logo} alt="Courtava" className="h-8 w-8" />
           <span className="font-display text-xl font-bold text-foreground">
             Courtava
           </span>
