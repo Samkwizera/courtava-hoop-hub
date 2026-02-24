@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Youtube } from "lucide-react";
+import { Instagram } from "lucide-react";
 import logo from "@/assets/courtava-logo.png";
 
 const Footer = () => (
@@ -10,15 +10,11 @@ const Footer = () => (
           <span className="font-display font-bold text-foreground">Courtava</span>
         </div>
 
-        <div className="flex items-center gap-5">
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Twitter className="w-5 h-5" />
-          </a>
-          <a href="https://instagram.com/trycourtava" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-sm text-muted-foreground">Follow us on social media</p>
+          <a href="https://instagram.com/trycourtava" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <Instagram className="w-5 h-5" />
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Youtube className="w-5 h-5" />
+            <span className="text-sm font-medium">@trycourtava</span>
           </a>
         </div>
 
