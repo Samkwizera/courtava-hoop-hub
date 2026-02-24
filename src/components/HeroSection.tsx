@@ -53,7 +53,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <a href="#early-access">
+            <a href="https://form.typeform.com/to/jXf0uH8t" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="text-base px-8 py-6 rounded-xl font-display font-semibold shadow-lg shadow-primary/25">
                 Join Early Access
               </Button>
