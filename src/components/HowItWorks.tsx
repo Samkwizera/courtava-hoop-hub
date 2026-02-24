@@ -23,8 +23,9 @@ const steps = [
 ];
 
 const HowItWorks = () => (
-  <section id="how-it-works" className="py-24 bg-muted/50">
-    <div className="container mx-auto px-4">
+  <section id="how-it-works" className="py-24 bg-muted/50 relative overflow-hidden">
+    <div className="absolute inset-0 dot-pattern opacity-30" />
+    <div className="container mx-auto px-4 relative">
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
@@ -32,38 +33,46 @@ const HowItWorks = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
+        <span className="text-xs font-display font-bold text-primary uppercase tracking-widest mb-3 block">
+          How It Works
+        </span>
         <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
-          How Courtava works
+          Three steps to get in the game
         </h2>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-          Three simple steps to get in the game.
+          Simple, fast, and built around how players actually play.
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-10 max-w-4xl mx-auto">
-        {steps.map((s, i) => (
-          <motion.div
-            key={i}
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.15 }}
-          >
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
-              <s.icon className="w-7 h-7 text-primary" />
-            </div>
-            <span className="text-xs font-display font-bold text-primary uppercase tracking-wider">
-              Step {s.step}
-            </span>
-            <h3 className="font-display font-bold text-xl text-foreground mt-2 mb-2">
-              {s.title}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {s.description}
-            </p>
-          </motion.div>
-        ))}
+      <div className="relative max-w-4xl mx-auto">
+        {/* Connector line */}
+        <div className="hidden md:block absolute top-[3.5rem] left-[16.67%] right-[16.67%] h-px bg-border" />
+
+        <div className="grid md:grid-cols-3 gap-10">
+          {steps.map((s, i) => (
+            <motion.div
+              key={i}
+              className="text-center relative"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.15 }}
+            >
+              <div className="w-16 h-16 rounded-2xl bg-card border-2 border-primary/20 flex items-center justify-center mx-auto mb-5 relative z-10">
+                <s.icon className="w-7 h-7 text-primary" />
+              </div>
+              <span className="inline-block px-3 py-0.5 rounded-full bg-primary/10 text-xs font-display font-bold text-primary uppercase tracking-wider mb-3">
+                Step {s.step}
+              </span>
+              <h3 className="font-display font-bold text-xl text-foreground mb-2">
+                {s.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-[250px] mx-auto">
+                {s.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   </section>

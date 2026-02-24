@@ -23,8 +23,9 @@ const problems = [
 ];
 
 const ProblemSection = () => (
-  <section className="py-24 bg-muted/50">
-    <div className="container mx-auto px-4">
+  <section className="py-24 bg-muted/50 relative overflow-hidden">
+    <div className="absolute inset-0 dot-pattern opacity-30" />
+    <div className="container mx-auto px-4 relative">
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
@@ -32,6 +33,9 @@ const ProblemSection = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
+        <span className="text-xs font-display font-bold text-primary uppercase tracking-widest mb-3 block">
+          The Problem
+        </span>
         <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
           The pickup game struggle is real
         </h2>
@@ -44,14 +48,17 @@ const ProblemSection = () => (
         {problems.map((p, i) => (
           <motion.div
             key={i}
-            className="bg-card rounded-2xl p-8 border border-border shadow-sm"
+            className="bg-card rounded-2xl p-8 border border-border relative overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
-            <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-5">
-              <p.icon className="w-6 h-6 text-primary" />
+            <span className="absolute top-5 right-5 font-display font-extrabold text-6xl text-muted/60 select-none leading-none">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-5">
+              <p.icon className="w-6 h-6 text-destructive" />
             </div>
             <h3 className="font-display font-semibold text-lg text-foreground mb-2">
               {p.title}
