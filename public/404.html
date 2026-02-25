@@ -12,7 +12,7 @@
       Technique by: https://github.com/rafgraph/spa-github-pages
     -->
     <script>
-        var seg = 1;
+        var seg = 1; // number of path segments in the repo name (1 = /courtava-hoop-hub/)
         var l = window.location;
         l.replace(
             l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + l.pathname.split('/').slice(0, 1 + seg).join('/') + '/?/' +
