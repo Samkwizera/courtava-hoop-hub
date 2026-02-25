@@ -5,9 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // On GitHub Pages the site lives at /courtava-hoop-hub/ (project repo subdirectory).
-  // On Cloudflare Pages (and local dev) it lives at the root /.
-  base: process.env.GITHUB_ACTIONS ? "/courtava-hoop-hub/" : "/",
+  // Custom domain (courtava.com) means the site is served from root "/" on both
+  // GitHub Pages and Cloudflare Pages — no subdirectory needed.
+  base: "/",
   server: {
     host: "::",
     port: 8080,
