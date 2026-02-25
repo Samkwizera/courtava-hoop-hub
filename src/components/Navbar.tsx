@@ -22,11 +22,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
       <div
-        className={`container mx-auto flex items-center justify-between py-3 px-6 rounded-2xl transition-all duration-300 ${
-          scrolled
+        className={`container mx-auto flex items-center justify-between py-3 px-6 rounded-2xl transition-all duration-300 ${scrolled
             ? "bg-background/80 backdrop-blur-xl shadow-lg border border-border"
             : "bg-background/50 backdrop-blur-md border border-border/50"
-        }`}
+          }`}
       >
         <a href="#" className="flex items-center gap-2">
           <img src={logo} alt="Courtava" className="h-8 w-8" />
@@ -47,7 +46,7 @@ const Navbar = () => {
             </a>
           ))}
           <a href="https://form.typeform.com/to/jXf0uH8t" target="_blank" rel="noopener noreferrer">
-            <Button size="sm">Join Early Access</Button>
+            <Button size="sm">Get early access</Button>
           </a>
         </div>
 
@@ -75,7 +74,7 @@ const Navbar = () => {
           ))}
           <a href="https://form.typeform.com/to/jXf0uH8t" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
             <Button size="sm" className="w-full">
-              Join Early Access
+              Get early access
             </Button>
           </a>
         </div>

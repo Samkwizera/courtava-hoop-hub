@@ -1,73 +1,124 @@
-# Welcome to your Lovable project
+# Courtava — Find Courts, Games & Your Basketball Community
 
-## Project info
+Courtava connects basketball players to nearby courts and pickup games. This repository hosts the **landing / waitlist page** for the Courtava platform.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+> 🏀 **Live site:** [courtava.com](https://courtava.com) &nbsp;|&nbsp; 📸 **Instagram:** [@trycourtava](https://www.instagram.com/trycourtava/) &nbsp;|&nbsp; ✉️ courtavaai@gmail.com
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+| Layer | Technology |
+|---|---|
+| Framework | [React 18](https://react.dev) + [TypeScript](https://www.typescriptlang.org/) |
+| Build tool | [Vite 5](https://vitejs.dev/) |
+| Styling | [Tailwind CSS v3](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) |
+| Animations | [Framer Motion](https://www.framer.com/motion/) |
+| Routing | [React Router v6](https://reactrouter.com/) |
+| Forms / API | [Typeform](https://www.typeform.com/) (waitlist) |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Local Development
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+**Prerequisites:** Node.js ≥ 18 and npm (or bun).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# 1. Clone the repo
+git clone https://github.com/Samkwizera/courtava-hoop-hub.git
+cd courtava-hoop-hub
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2. Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 3. Start the dev server (http://localhost:8080)
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Other useful commands:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build      # Production build → dist/
+npm run preview    # Preview the production build locally
+npm run lint       # Run ESLint
+npm run test       # Run unit tests (Vitest)
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deployment
 
-## What technologies are used for this project?
+### Cloudflare Pages (recommended)
 
-This project is built with:
+1. Push this repo to GitHub.
+2. In the [Cloudflare Dashboard](https://dash.cloudflare.com/), go to **Workers & Pages → Create → Pages → Connect to Git**.
+3. Select the `courtava-hoop-hub` repository.
+4. Set the following build settings:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+   | Setting | Value |
+   |---|---|
+   | Framework preset | None (or Vite) |
+   | Build command | `npm run build` |
+   | Build output directory | `dist` |
 
-## How can I deploy this project?
+5. Click **Save and Deploy**. Cloudflare will build and deploy automatically on every push to `main`.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+> The `public/_redirects` file is already configured to handle SPA (client-side) routing — no extra setup needed.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+### GitHub Pages
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Install the deploy helper:
+   ```sh
+   npm install --save-dev gh-pages
+   ```
+2. Add these scripts to `package.json`:
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d dist"
+   ```
+3. Deploy:
+   ```sh
+   npm run deploy
+   ```
+4. In the GitHub repo settings → **Pages**, set the source to the `gh-pages` branch.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+> The `public/404.html` redirect trick is already included to support direct URL access and page refreshes with client-side routing.
+
+---
+
+## Project Structure
+
+```
+courtava-hoop-hub/
+├── public/             # Static assets (favicon, robots.txt, _redirects, 404.html)
+├── src/
+│   ├── assets/         # Images (logo, hero background)
+│   ├── components/     # Page sections & shadcn/ui components
+│   │   ├── HeroSection.tsx
+│   │   ├── FeaturesSection.tsx
+│   │   ├── HowItWorks.tsx
+│   │   ├── EarlyAccessForm.tsx
+│   │   ├── SocialProof.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   └── ui/         # shadcn/ui primitives
+│   ├── pages/
+│   │   ├── Index.tsx   # Main landing page
+│   │   └── NotFound.tsx
+│   └── main.tsx        # App entry point
+├── vite.config.ts
+├── tailwind.config.ts
+└── index.html
+```
+
+---
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
+
+---
+
+© 2025 Courtava. All rights reserved.

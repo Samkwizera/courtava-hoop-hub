@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Courtava</title>
+    <!--
+      GitHub Pages SPA redirect.
+      When GitHub Pages serves a 404 it uses this file. The script below
+      encodes the full path into the query string of the root URL so that
+      index.html can redirect to the correct client-side route.
+      Technique by: https://github.com/rafgraph/spa-github-pages
+    -->
+    <script>
+        var seg = 1;
+        var l = window.location;
+        l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + l.pathname.split('/').slice(0, 1 + seg).join('/') + '/?/' +
+            l.pathname.slice(1).split('/').slice(seg).join('/').replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash
+        );
+    </script>
+</head>
+
+<body></body>
+
+</html>
