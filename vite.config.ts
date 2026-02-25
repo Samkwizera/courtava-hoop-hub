@@ -5,9 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Use "./" for relative paths so assets resolve correctly on
-  // both Cloudflare Pages and GitHub Pages (with or without a subdirectory).
-  base: "./",
+  // On GitHub Pages the site lives at /courtava-hoop-hub/ (project repo subdirectory).
+  // On Cloudflare Pages (and local dev) it lives at the root /.
+  base: process.env.GITHUB_ACTIONS ? "/courtava-hoop-hub/" : "/",
   server: {
     host: "::",
     port: 8080,
